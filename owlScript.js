@@ -6,7 +6,7 @@ function countWords(){
 	s = s.replace(/\n /,"\n");
 	document.getElementById("wordcount").value = s.split(' ').length;
 
-/*change background images*/	
+/*change background images and audios*/	
 	if (s.split(' ').length <= 10) {
 		document.body.style.background = "black url('image/night_step1.jpg') no-repeat left top ";
 		document.getElementById('audiotag1').play();
@@ -23,7 +23,28 @@ function countWords(){
 		document.getElementById('audiotag2').pause();
 		document.getElementById('audiotag3').play();
 	};
+}
 
+/*fullscreen mode*/
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
 }
 
 /* function decideBGimage() {
