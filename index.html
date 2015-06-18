@@ -1,7 +1,8 @@
 <html>
 <head>
 	<title>night owl simulator</title>
-
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 <link rel="stylesheet" type="text/css" href="owlstylesheet.css">
 <script src="owlScript.js"></script>
@@ -10,7 +11,7 @@
 <audio loop id="audiotag2" src="audio/dawn_stage2.mp3" preload="auto"></audio>
 <audio loop id="audiotag3" src="audio/morning_stage3.mp3" preload="auto"></audio>
 
-<div class="header"><input id="bt" type="button" value="click to toggle fullscreen" onclick="toggleFullScreen()"></div>
+<div class="header" align="middle"><input id="bt" type="button" value="click to toggle fullscreen" onclick="toggleFullScreen()"></div>
 
 <div class="content">
 	<h1>Night Owl Simulator</h1>
@@ -18,17 +19,11 @@
 	<p>
 	Let's start writing! Hope this place could boost your creativity :D<br>
 	The background image and the ambient sound effect would be changed based on your progress. Try your best to reach your goal!
-	<ul>
-		<li>First Stage: night
-		<li>Second Stage: dawn
-		<li>Final Stage: morning		
-	</ul>
-	</p>
+	</p>	
 	<form name="form1" method="post" action="">
-	  <textarea autofocus class="form-control" name="inputString" id="inputString" rows="10" onkeyup="countWords()"  type="text">Please type your article here!</textarea>
-	<br>
-	<p>Your goal is to type <input name="theAnnounce" id="theAnnounce" value="" size="4" type="text"> words.</p>
-	<p>Now you have typed <input name="wordcount" id="wordcount" value="" size="4" type="text"> words.</p>
+	  <textarea autofocus class="form-control" name="inputString" id="inputString" rows="15" onkeyup="countWords()"  type="text">Please type your article here!</textarea>
+		<p>Your goal is to type <input name="theAnnounce" id="theAnnounce" value="" size="4" type="text"> words.</p>
+		<p>Now you have typed <input name="wordcount" id="wordcount" value="" size="4" type="text"> words.</p>		
 	</form>
 </div>
 
