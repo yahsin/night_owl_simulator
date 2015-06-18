@@ -6,18 +6,28 @@
 <link rel="stylesheet" type="text/css" href="owlstylesheet.css">
 <script src="owlScript.js"></script>
 <body>
+<audio loop id="audiotag1" src="audio/night_stage1.mp3" preload="auto"></audio>
+<audio loop id="audiotag2" src="audio/dawn_stage2.mp3" preload="auto"></audio>
+<audio loop id="audiotag3" src="audio/morning_stage3.mp3" preload="auto"></audio>
+
+<div class="header">=3=</div>
+
 <div>
 	<h1>Night Owl Simulator</h1>
-	
-	<form class="form-inline" name="form1" method="post" action="">
-	  <textarea class="form-control" name="inputString" id="inputString" cols="100" rows="10">Let's start writing!</textarea>
+	<hr>
+	<p>
+	Let's start writing! <br>
+	Please press <kbd>Check status</kbd> button to check the status, the background image and the ambients sound effect would be changed based on the number of the words. <br>
+	0~10: night, 10~20: dawn, 20 up: morning</p>
+	<form name="form1" method="post" action="">
+	  <textarea class="form-control" name="inputString" id="inputString" cols="100" rows="10">Please type your article here!</textarea>
 	<br><br>
-	<div class="form-group">
-		<input class="btn btn-success" name="Convert" value="Count Words" onclick="countWords();" type="button"> 
-		<input class="form-control" name="wordcount" id="wordcount" value="" size="6" type="text">
-	</div>
+		<input id="bt" name="Convert" value="Check status" onclick="countWords();" type="button"> 
+		<input name="wordcount" id="wordcount" value="" size="6" type="text"> words
 	</form>
 </div>
+
+<div class="footer">Ya-Hsin Hung 2015</div>
 
 </body>
 </html>
