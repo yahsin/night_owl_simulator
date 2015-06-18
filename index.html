@@ -25,9 +25,8 @@
 	</ul>
 	</p>
 	<form name="form1" method="post" action="">
-	  <textarea class="form-control" name="inputString" id="inputString" rows="15">Please type your article here!</textarea>
-	<br><br>
-		<input id="bt" name="Convert" value="Check status" onclick="countWords();" type="button"> 
+	  <textarea class="form-control" name="inputString" id="inputString" rows="15" onkeyup="countWords()"  type="text">Please type your article here!</textarea>
+	<br>	
 	<p>Now you have typed <input name="wordcount" id="wordcount" value="" size="6" type="text"> words</p>
 	</form>
 </div>
