@@ -1,3 +1,14 @@
+/*ask goal*/
+function askGoal(){
+	var goalNumber = prompt("Please enter the number of words you want to achieve", "30");
+	    document.getElementById("theAnnounce").value = goalNumber;
+    
+    pointCount1 = goalNumber/3;
+    pointCount2 = goalNumber/3*2;
+    pointCount3 = goalNumber/1;    
+}
+
+
 /*count Words*/
 function countWords(){
 	s = document.getElementById("inputString").value;
@@ -7,21 +18,23 @@ function countWords(){
 	document.getElementById("wordcount").value = s.split(' ').length;
 
 /*change background images and audios*/	
-	if (s.split(' ').length <= 10) {
+	if (s.split(' ').length <= pointCount1) {
 		document.body.style.background = "black url('image/night_step1.jpg') no-repeat left top ";
 		document.getElementById('audiotag1').play();
 		document.getElementById('audiotag2').pause();
 		document.getElementById('audiotag3').pause();
-	} else if (s.split(' ').length <= 20){
+	} else if (s.split(' ').length <= pointCount2){
 		document.body.style.background = "black url('image/dawn_step2.jpg') no-repeat left top ";
 		document.getElementById('audiotag1').pause();
 		document.getElementById('audiotag2').play();
 		document.getElementById('audiotag3').pause();
-	}else {
+	}else if (s.split(' ').length <= pointCount3){
 		document.body.style.background = "black url('image/morning_step1.jpg') no-repeat left top ";
 		document.getElementById('audiotag1').pause();
 		document.getElementById('audiotag2').pause();
 		document.getElementById('audiotag3').play();
+	}else {
+		confirm("Congratulations! You are done, take a rest.");
 	};
 }
 

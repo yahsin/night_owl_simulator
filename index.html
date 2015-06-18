@@ -5,7 +5,7 @@
 </head>
 <link rel="stylesheet" type="text/css" href="owlstylesheet.css">
 <script src="owlScript.js"></script>
-<body>
+<body onload="askGoal()">
 <audio loop id="audiotag1" src="audio/night_stage1.mp3" preload="auto"></audio>
 <audio loop id="audiotag2" src="audio/dawn_stage2.mp3" preload="auto"></audio>
 <audio loop id="audiotag3" src="audio/morning_stage3.mp3" preload="auto"></audio>
@@ -17,17 +17,19 @@
 	<hr>
 	<p>
 	Let's start writing! <br>
-	Please press <kbd>Check status</kbd> button to check the status, the background image and the ambients sound effect would be changed based on the number of the words. <br>
+	The background image and the ambient sound effect would be changed based on your progress. <br>
+	Try your best to reach your goal!
 	<ul>
-		<li>0~10: night
-		<li>10~20: dawn
-		<li>20 up: morning
+		<li>First Stage: night
+		<li>Second Stage: dawn
+		<li>Final Stage: morning		
 	</ul>
 	</p>
 	<form name="form1" method="post" action="">
 	  <textarea class="form-control" name="inputString" id="inputString" rows="15" onkeyup="countWords()"  type="text">Please type your article here!</textarea>
-	<br>	
-	<p>Now you have typed <input name="wordcount" id="wordcount" value="" size="6" type="text"> words</p>
+	<br>
+	<p>Your goal is to type <input name="theAnnounce" id="theAnnounce" value="" size="4" type="text"> words</p>
+	<p>Now you have typed <input name="wordcount" id="wordcount" value="" size="4" type="text"> words</p>
 	</form>
 </div>
 
